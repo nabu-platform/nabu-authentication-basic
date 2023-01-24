@@ -1,0 +1,7 @@
+<structure interface="be.nabu.libs.http.api.HTTPRequestAuthenticator.authenticate" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="basicCredentials" definition="nabu.authentication.basic.crud.basicCredential.types.output" minOccurs="0" name="authentication"/>
+    <field name="basicValue" type="java.lang.String"/>
+    <field name="querySeparator" type="java.lang.String"/>
+</structure>
