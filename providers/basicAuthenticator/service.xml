@@ -44,7 +44,8 @@
 			id="668ed7d4a5fe4428ba6c591d1ff3f471"
 			label="!authentication"
 			lineNumber="3"
-			message="Basic authentication not found" xsi:nil="true"/>
+			message="Basic authentication not found"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 			disabled="false"
 			id="927820c3db2e48af8e0e368dd9475c36"
@@ -504,12 +505,22 @@
 					<to>headers[0]/value</to>
 				</steps>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9afcb167fb38486395982ca42c6afa2d"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>true</from>
+				<to>output/authenticated</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
 				description="=&quot;Unknown credential type: &quot; + authentication/type"
 				disabled="false"
 				id="645ea45490f14b57a9eb3c8e6fd97d39"
 				lineNumber="15"
-				message="Unknown credential type" xsi:nil="true"/>
+				message="Unknown credential type"
+				whitelist="false" xsi:nil="true"/>
 	</steps>
 </sequence>
